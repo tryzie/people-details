@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Personal Details</h1>
+<div id="table-container">
+    <div class="table-controls">
+        <button class="action-btn sort-btn" id="sort-btn"><img src="images/sort-icon.svg" alt="sort"> Sort</button>
+        <button class="action-btn filter-btn" id="filter-btn"><img src="images/filter-icon.svg" alt="filter"> Filter</button>
+        <button class="action-btn refresh-btn" id="refresh-btn"><img src="images/refresh-icon.svg" alt="refresh"> Refresh</button>
+    </div>
+    <div id="loading-spinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Middle Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <div class="pagination" id="pagination"></div>
+</div>
+
+<!-- Sort Popup -->
+<div id="sort-popup" class="popup" style="display: none">
+    <div class="popup-content">
+        <div class="popup-header">
+            <div class="popup-header-left">
+                <img src="images/sort-header.svg" alt="">
+                <h3>Sort Table</h3>
+            </div>
+            <button class="cancel" onclick="closePopup()"><img src="images/cancel-icon.svg" alt="close"></button>
+        </div>
+        <div id="sort-fields"></div>
+        <button id="add-sort"><img src="images/add-icon.svg" alt="add">Add Sorter</button>
+        <div class="popup-footer">
+            <button id="reset-sort">Reset Sort</button>
+            <button id="submit-sort">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Filter Popup -->
+<div id="filter-popup" class="popup" style="display: none">
+    <div class="popup-content">
+        <div class="popup-header">
+            <div class="popup-header-left">
+                <img src="images/filter-header.svg" alt="">
+                <h3>Filter Table</h3>
+            </div>
+            <button class="cancel" onclick="closePopup()"><img src="images/cancel-icon.svg" alt="close"></button>
+        </div>
+        <div id="filter-fields"></div>
+        <button id="add-filter"><img src="images/filter-with-plus.svg" alt="filter">Add Filter</button>
+        <div class="popup-footer">
+            <button id="reset-filter">Reset Filter</button>
+            <button id="submit-filter">Submit</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
