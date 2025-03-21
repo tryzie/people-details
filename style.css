@@ -1,6 +1,10 @@
 h1{
     text-align: center;
     text-decoration: underline;
+    background-color: #4D2774;
+    color: #DB8A74;
+    padding-bottom: 13px;
+    padding-top: 13px;
 }
 
 #table-container {
